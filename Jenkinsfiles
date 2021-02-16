@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+     stages{
+        stage('GIT Checkout'){
+            steps{
+               git branch: 'master', 
+               credentialsId: 'thotatejakumar', 
+               url: 'https://github.com/thotatejakumar-1237/car-rentals-1'
+            }
+        }
+        stage('Maven Package'){
+            steps{
+               sh 'mvn clean package'
+            }
+        }
+         stage('Nexus Package'){
+            steps{
+               sh 'mvn clean package'
+            }
+        
+        }
+        stage('Tomcat Dev'){
+            steps{
+               echo 'This needs to be implemented'
+            }
+        
+        }
+    }
+}
