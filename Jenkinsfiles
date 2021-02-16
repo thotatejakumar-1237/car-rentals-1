@@ -14,9 +14,8 @@ pipeline{
         
         }
         stage('Tomcat Dev'){
-            steps{
-               echo 'This needs to be implemented'
-            }
+          sshagent(['']) {
+}
         
         }
     }
