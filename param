@@ -3,7 +3,7 @@ agents
 
 parameters {
   choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the appication environmen', name: 'deployEnv'
-  choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the branch to deploy', name: 'deployname'
+  choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the branch to deploy', name: 'deployName'
 }
 
 stages{
@@ -14,3 +14,13 @@ stages{
                 echo "We are building ${params.branchName} branch"
             }
         }
+stages{
+        
+        stage('Tomcat Package'){
+            steps{ 
+                   echo "we are deploying to ${params.branchname} environment
+                   }
+                   }
+                   }
+                   }
+                   
