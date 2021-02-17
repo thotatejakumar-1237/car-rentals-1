@@ -32,7 +32,7 @@ pipeline{
 }
 post {
   failure {
-    echo "build failed"
+   mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Jenkins Build Jobs', to: 'teja.a1k@gmail.com'
 }
 }
 }
