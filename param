@@ -1,1 +1,16 @@
+Pipeline {
+agents
 
+parameters {
+  choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the appication environmen', name: 'deployEnv'
+  choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the branch to deploy', name: 'deployname'
+}
+
+stages{
+        
+        stage('Maven Package'){
+            steps{
+                sh "git checkout ${params.branchName}"
+                echo "We are building ${params.branchName} branch"
+            }
+        }
