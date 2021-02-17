@@ -1,5 +1,5 @@
 Pipeline{
-agents any
+agent any
 
 parameters {
   choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the appication environmen', name: 'deployEnv'
@@ -17,7 +17,7 @@ stages{
         
         stage('Tomcat Package'){
             steps{ 
-                   echo "we are deploying to ${params.branchname} environment"
+                   echo "we are deploying to ${params.branchName} environment"
                    }
                    }
                    }
