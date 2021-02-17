@@ -14,7 +14,6 @@ stages{
                 echo "We are building ${params.branchName}"
             }
         }
-stages{
         
         stage('Tomcat Package'){
             steps{ 
