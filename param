@@ -1,5 +1,5 @@
 Pipeline {
-agents
+agents any
 
 parameters {
   choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the appication environmen', name: 'deployEnv'
