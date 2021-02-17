@@ -10,8 +10,8 @@ stages{
         
         stage('Maven Package'){
             steps{
-                sh "git checkout ${params.branchName}"
-                echo "We are building ${params.branchName} branch"
+     
+                echo "We are building ${params.branchName}"
             }
         }
 stages{
@@ -23,4 +23,4 @@ stages{
                    }
                    }
                    }
-                   }
+                 
