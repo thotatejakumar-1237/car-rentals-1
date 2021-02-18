@@ -2,15 +2,12 @@ Pipeline{
 agent any
 
 parameters {
-  choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the appication environmen', name: 'deployEnv'
-  choice choices: ['dev', 'test', 'stg', 'prof'], description: 'choose the branch to deploy', name: 'deployName'
+  choice choices: ['dev', 'test', 'stg', 'prod'], description: 'choose the app env to deploy', name: 'deployEnv'
+  choice choices: ['develop', 'release ', 'master'], description: 'choose the brnach to deploy', name: 'branchName'
 }
-
-stages{
-        
+stages{ 
         stage('Maven Package'){
             steps{
-     
                 echo "We are building ${params.branchName}"
             }
         }
