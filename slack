@@ -1,11 +1,6 @@
 currentBuild.displayName = "${currentBuild.projectName}#${currentBuild.number}"
 pipeline{
     agent any
-    environment {
-        TOMCAT_USR = "ec2-user"
-        TOMCAT_HOST = "${TOMCAT_USR}@172.31.33.192"
-        TOMCAT_SVC = "/usr/sbin/service tomcat"
-    }
     stages{
         stage('Maven Package and Nexus Deploy'){
             steps{
